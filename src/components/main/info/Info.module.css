@@ -1,0 +1,36 @@
+.info {
+  max-width: 400px;
+  display: flex;
+}
+
+.image {
+  max-width: 50%;
+}
+
+.description {
+  max-width: 250px;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.sinopsis {
+  padding: 10px 15px;
+}
+
+.data {
+  width: 100%;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.premiere {
+  font-weight: bold;
+}
+
+.button {
+  padding: 5px 10px;
+}
