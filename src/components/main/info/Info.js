@@ -3,13 +3,16 @@ import styles from "./Info.module.css";
 
 const Info = () => {
   return (
-    <figure className={styles.info}>
-      <img
-        className={styles.image}
-        src="./img/vengadores.jpg"
-        alt="poster de película"
-      />
-      <figcaption className={styles.description}>
+    <div className={styles.info}>
+      <figure className={styles.figure}>
+        <img
+          className={styles.image}
+          src="./img/vengadores.jpg"
+          alt="poster de película"
+        />
+      </figure>
+
+      <article className={styles.description}>
         <h2 className={styles.title}>La película</h2>
         <p className={styles.sinopsis}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo ad
@@ -26,8 +29,8 @@ const Info = () => {
           </p>
         </div>
         <button className={styles.button}>Regresar</button>
-      </figcaption>
-    </figure>
+      </article>
+    </div>
   );
 };
 
