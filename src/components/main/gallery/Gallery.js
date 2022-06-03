@@ -8,10 +8,7 @@ import styles from "./Gallery.module.css";
 const Gallery = () => {
   const [info, setInfo] = useState(null);
   const { data } = useContext(DataContext);
-  console.log(data);
-
   const urlImg = "https://image.tmdb.org/t/p/w500";
-
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
@@ -26,56 +23,33 @@ const Gallery = () => {
         todavía no viste y te recomendaron.
       </p>
 
-      {window.matchMedia("(min-width: 600px)").matches ? null : <Info />}
+      {window.matchMedia("(min-width: 600px)").matches ? null : <p></p>}
 
       <section className={styles.section}>
         <h2 className={styles.section__title}>Acción - Terror y más</h2>
-        <div>
-          <div className={styles.section__cards}>
-            {films.length !== 0 ? (
-              films.map((card) => {
-                if (card.poster_path !== null) {
-                  return (
-                    <Card
-                      setInfo={setInfo}
-                      id={card.id}
-                      key={card.id}
-                      img={`${urlImg}${card.poster_path}`}
-                      age={card.release_date}
-                    />
-                  );
-                } else {
-                  return null;
-                }
-              })
-            ) : (
-              <h3>--- No se encontraron resultados ---</h3>
-            )}
-
-            {films.find((card) => card.id === info) !== undefined ? (
-              <article>
-                <h2>{films.filter((card) => card.id === info)[0].title}</h2>
-                <div>
-                  <img
-                    src={`${urlImg}${
-                      films.filter((card) => card.id === info)[0].poster_path
-                    }`}
-                    alt="poster de film"
+        <div className={styles.section__cards}>
+          {films.length !== 0 ? (
+            films.map((card) => {
+              if (card.poster_path !== null) {
+                return (
+                  <Card
+                    setInfo={setInfo}
+                    id={card.id}
+                    key={card.id}
+                    img={`${urlImg}${card.poster_path}`}
+                    age={card.release_date}
                   />
-                </div>
-                <div>
-                  <p>{films.filter((card) => card.id === info)[0].overview}</p>
-                  <p>
-                    Popularidad:{" "}
-                    <span>
-                      {films.filter((card) => card.id === info)[0].popularity}
-                    </span>
-                  </p>
-                  <button onClick={() => setInfo("")}>Regresar</button>
-                </div>
-              </article>
-            ) : null}
-          </div>
+                );
+              } else {
+                return null;
+              }
+            })
+          ) : (
+            <h3>--- No se encontraron resultados ---</h3>
+          )}
+          {films.find((card) => card.id === info) !== undefined ? (
+            <Info info={films.filter((card) => card.id === info)[0]}></Info>
+          ) : null}
         </div>
       </section>
     </article>

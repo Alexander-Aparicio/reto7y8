@@ -7,16 +7,15 @@ const Card = ({ img, age, setInfo, id }) => {
   };
 
   return (
-    <figure className={styles.figure}>
+    <figure onClick={handleClick} className={styles.figure}>
       <img
         className={styles.figure__image}
         src={img}
         alt="card de película"
-        onClick={handleClick}
       />
-      <figcaption className={styles.figure__caption}>
+      {/* <figcaption className={styles.figure__caption}>
         <p>{age}</p>
-      </figcaption>
+      </figcaption> */}
     </figure>
   );
 };
