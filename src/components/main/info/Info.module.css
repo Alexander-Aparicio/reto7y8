@@ -20,7 +20,7 @@
   margin: 0;
   max-width: 300px;
   max-height: 500px;
-  border-right: 3px solid #ffffff59;
+  border-right: 4px solid #ffffff32;
 }
 
 .image {
@@ -81,6 +81,9 @@
   border-style: none;
   outline-style: none;
   color: #f4f4f4;
+}
+.button:hover {
+ cursor: pointer;
 }
 
 @media (min-width: 700px) {
