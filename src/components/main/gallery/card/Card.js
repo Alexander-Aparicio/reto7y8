@@ -1,4 +1,4 @@
-import "./Card.css";
+import styles from "./Card.module.css";
 
 const Card = ({ img, age, setInfo, id }) => {
   const handleClick = () => {
@@ -7,14 +7,14 @@ const Card = ({ img, age, setInfo, id }) => {
   };
 
   return (
-    <figure className="figure">
+    <figure className={styles.figure}>
       <img
-        className="figure__image"
+        className={styles.figure__image}
         src={img}
         alt="card de película"
         onClick={handleClick}
       />
-      <figcaption className="figure__caption">
+      <figcaption className={styles.figure__caption}>
         <p>{age}</p>
       </figcaption>
     </figure>

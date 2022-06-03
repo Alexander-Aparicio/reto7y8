@@ -4,10 +4,7 @@
 }
 .section {
 }
-.article-cards-container {
-   
-}
-.article-cards {
+.section__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

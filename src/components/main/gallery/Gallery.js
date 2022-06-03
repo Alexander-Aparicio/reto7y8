@@ -3,7 +3,7 @@ import { DataContext } from "../../../context/DataContext";
 import GetFilms from "../../../helpers/fetch";
 import Card from "./card/Card";
 import Info from "../info/Info";
-import "./Gallery.css";
+import styles from "./Gallery.module.css";
 
 const Gallery = () => {
   const [info, setInfo] = useState(null);
@@ -19,19 +19,19 @@ const Gallery = () => {
   }, [data]);
 
   return (
-    <article className="article">
-      <h1 className="article__title">🍿 ¡BIENVENIDO! 😎</h1>
-      <p className="article__description">
+    <article className={styles.article}>
+      <h1 className={styles.article__title}>🍿 ¡BIENVENIDO! 😎</h1>
+      <p className={styles.article__description}>
         Busca información sobre las películas a estrenarse, encuentra films que
         todavía no viste y te recomendaron.
       </p>
 
       {window.matchMedia("(min-width: 600px)").matches ? null : <Info />}
 
-      <section className="section">
-        <h2 className="section__title">Acción - Terror y más</h2>
-        <div className="article-cards-container">
-          <div className="article-cards">
+      <section className={styles.section}>
+        <h2 className={styles.section__title}>Acción - Terror y más</h2>
+        <div>
+          <div className={styles.section__cards}>
             {films.length !== 0 ? (
               films.map((card) => {
                 if (card.poster_path !== null) {
