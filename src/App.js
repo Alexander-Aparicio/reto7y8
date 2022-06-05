@@ -1,9 +1,12 @@
-import Info from "./components/main/info/Info";
+import FormSearch from "./components/main/welcome/FormSearch";
+import Welcome from "./components/main/welcome/Welcome";
+
 
 function App() {
   return (
     <div className="App">
-      <Info />
+      <Welcome/>
+      {window.matchMedia("(min-width: 450px)").matches ? null : <FormSearch/>}
     </div>
   );
 }
