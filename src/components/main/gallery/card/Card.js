@@ -1,21 +1,17 @@
 import styles from "./Card.module.css";
 
-const Card = ({ img, age, setInfo, id }) => {
+const Card = ({ img, age, setInfo, id, setVisible }) => {
   const handleClick = () => {
     setInfo(id);
-    window.scrollTo(0, 200);
+    setVisible(true);
+    window.matchMedia("(min-width: 600px)").matches
+      ? window.scrollTo(0, 200)
+      : window.scrollTo(0, 0);
   };
 
   return (
     <figure onClick={handleClick} className={styles.figure}>
-      <img
-        className={styles.figure__image}
-        src={img}
-        alt="card de película"
-      />
-      {/* <figcaption className={styles.figure__caption}>
-        <p>{age}</p>
-      </figcaption> */}
+      <img className={styles.figure__image} src={img} alt="card de película" />
     </figure>
   );
 };

@@ -7,6 +7,7 @@ import styles from "./Gallery.module.css";
 
 const Gallery = () => {
   const [info, setInfo] = useState(null);
+  const [visible, setVisible] = useState(false);
   const { data } = useContext(DataContext);
   const urlImg = "https://image.tmdb.org/t/p/w500";
   const [films, setFilms] = useState([]);
@@ -23,7 +24,7 @@ const Gallery = () => {
         todavía no viste y te recomendaron.
       </p>
 
-      {window.matchMedia("(min-width: 600px)").matches ? null : <p></p>}
+      {/* {window.matchMedia("(min-width: 600px)").matches ? null : <p></p>} */}
 
       <section className={styles.section}>
         <h2 className={styles.section__title}>Acción - Terror y más</h2>
@@ -33,6 +34,7 @@ const Gallery = () => {
               if (card.poster_path !== null) {
                 return (
                   <Card
+                    setVisible={setVisible}
                     setInfo={setInfo}
                     id={card.id}
                     key={card.id}
@@ -47,8 +49,12 @@ const Gallery = () => {
           ) : (
             <h3>--- No se encontraron resultados ---</h3>
           )}
-          {films.find((card) => card.id === info) !== undefined ? (
-            <Info info={films.filter((card) => card.id === info)[0]}></Info>
+          {films.find((card) => card.id === info) !== undefined &&
+          visible === true ? (
+            <Info
+              info={films.filter((card) => card.id === info)[0]}
+              setVisible={setVisible}
+            ></Info>
           ) : null}
         </div>
       </section>

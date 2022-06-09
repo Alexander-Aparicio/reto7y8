@@ -4,7 +4,7 @@ import Gallery from "./components/main/gallery/Gallery";
 function App() {
   return (
     <DataProvider>
-        <Gallery />
+      <Gallery />
     </DataProvider>
   );
 }
