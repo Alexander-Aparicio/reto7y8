@@ -9,11 +9,10 @@ function App() {
   return (
     <DataProvider>
       <Header />
+      <Welcome />
+      {window.matchMedia("(min-width: 450px)").matches ? null : <FormSearch />}
       <Gallery />
       <Footer />
-      <Welcome />
-      <Gallery />
-      {window.matchMedia("(min-width: 450px)").matches ? null : <FormSearch />}
     </DataProvider>
   );
 }
