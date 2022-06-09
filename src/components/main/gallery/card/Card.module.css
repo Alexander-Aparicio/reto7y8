@@ -1,0 +1,36 @@
+:root{
+    --background-color-figure: #ffffffc1;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid transparent;
+  margin: 0;
+}
+.figure__image {
+  width: 12.5rem;
+  height: 18rem;
+  border-radius: 0.5rem;
+}
+.figure__caption {
+  background-color: #14161b;
+  border-radius: 0.5rem;
+}
+.figure__caption h2 {
+  margin: 0.75rem auto;
+}
+
+.figure:hover .figure__caption {
+  background-color: var(--background-color-figure);
+}
+.figure:hover {
+    border: 4px solid var(--background-color-figure);
+    transform: scale(1.1);
+    border-radius: 0.5rem;
+    background-color: var(--background-color-figure);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    filter: brightness(1.05);
+  }
+  

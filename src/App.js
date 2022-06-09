@@ -1,13 +1,15 @@
-import FormSearch from "./components/main/welcome/FormSearch";
-import Welcome from "./components/main/welcome/Welcome";
-
+import { DataProvider } from "./context/DataContext";
+import Gallery from "./components/main/gallery/Gallery";
+  import Welcome from "./components/main/welcome/Welcome";
+  import FormSearch from "./components/main/welcome/FormSearch";
 
 function App() {
   return (
-    <div className="App">
-      <Welcome/>
-      {window.matchMedia("(min-width: 450px)").matches ? null : <FormSearch/>}
-    </div>
+    <DataProvider>
+    <Welcome/>
+      <Gallery />
+    {window.matchMedia("(min-width: 450px)").matches ? null : <FormSearch/>}
+    </DataProvider>
   );
 }
 

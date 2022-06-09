@@ -1,0 +1,18 @@
+.article {
+  color: white;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 95%;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.section__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem 2rem;
+}
