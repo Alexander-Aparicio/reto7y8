@@ -1,3 +1,4 @@
+import SearchFilms from "../search/SearchFilm";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
         />
       </figure>
       <h2 className={styles.name}>INFOPelículas</h2>
+      {window.matchMedia("(min-width: 600px)").matches ? <SearchFilms /> : null}
     </header>
   );
 };

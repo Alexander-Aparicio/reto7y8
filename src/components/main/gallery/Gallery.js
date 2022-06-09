@@ -4,6 +4,7 @@ import GetFilms from "../../../helpers/fetch";
 import Card from "./card/Card";
 import Info from "../info/Info";
 import styles from "./Gallery.module.css";
+import SearchFilms from "../../search/SearchFilm";
 
 const Gallery = () => {
   const [info, setInfo] = useState(null);
@@ -24,7 +25,7 @@ const Gallery = () => {
         todavía no viste y te recomendaron.
       </p>
 
-      {/* {window.matchMedia("(min-width: 600px)").matches ? null : <p></p>} */}
+      {window.matchMedia("(min-width: 600px)").matches ? null : <SearchFilms />}
 
       <section className={styles.section}>
         <h2 className={styles.section__title}>Acción - Terror y más</h2>
