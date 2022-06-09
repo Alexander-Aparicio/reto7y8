@@ -1,24 +1,24 @@
 .header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.header_imagecontainer {
+  display: flex;
+  max-width: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px 25px;
+}
+.header_image {
+  width: 100%;
+}
+.name {
+  color: #fff;
+}
+
+@media (min-width: 500px) {
+  .header_imagecontainer {
+    max-width: 56px;
   }
-  
-  .headerimagecontainer {
-    display: flex;
-    max-width: 42px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 10px 25px;
-  }
-  .headerimage {
-    width: 100%;
-  }
-  .name {
-    color: #fff;
-  }
-  
-  @media (min-width: 500px) {
-    .header__imagecontainer {
-      max-width: 56px;
-    }
-  }
+}

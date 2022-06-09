@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <figure className={styles.header__imagecontainer}>
+      <figure className={styles.header_imagecontainer}>
         <img
           src="https://i.postimg.cc/FRGLtGx0/icon-play.png"
           alt="Foto de Código"
