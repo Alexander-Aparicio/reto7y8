@@ -12,12 +12,12 @@ const Footer = () => {
                 href="https://www.instagram.com/"
                 className={styles.footerNavlink}
                 target="_blank"
+                rel="nofollow noopener noreferrer"
               >
                 <img
                   src="https://i.postimg.cc/sfJtqS4W/instagram.png"
                   alt="Instagram"
                   className={styles.footerNavlinkImage}
-                  target="_blank"
                 />
               </a>
             </li>
@@ -27,6 +27,7 @@ const Footer = () => {
                 href="https://es-la.facebook.com/"
                 className={styles.footerNavlink}
                 target="_blank"
+                rel="nofollow noopener noreferrer"
               >
                 <img
                   src="https://i.postimg.cc/7YHyZXZX/facebook.png"
@@ -41,6 +42,7 @@ const Footer = () => {
                 href="https://www.youtube.com/"
                 className={styles.footerNavlink}
                 target="_blank"
+                rel="nofollow noopener noreferrer"
               >
                 <img
                   src="https://i.postimg.cc/dtPYcvbM/youtube.png"
