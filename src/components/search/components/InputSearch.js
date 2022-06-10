@@ -1,3 +1,5 @@
+import styles from "./InputSearch.module.css";
+
 const InputSearch = ({ children, keyword, setKeyword }) => {
   return (
     <input
@@ -7,10 +9,11 @@ const InputSearch = ({ children, keyword, setKeyword }) => {
       }
       value={keyword.film}
       type={"search"}
-      className="rounded-md px-2 py-1 w-56 sm:max-w-sm"
+      className={styles.input}
       placeholder={children}
     />
   );
 };
 
 export default InputSearch;
+// rounded-md px-2 py-1 w-56 sm:max-w-sm

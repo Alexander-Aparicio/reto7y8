@@ -1,8 +1,13 @@
 .header {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
-
+.branding {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .header_imagecontainer {
   display: flex;
   max-width: 42px;
@@ -18,6 +23,9 @@
 }
 
 @media (min-width: 500px) {
+  .header {
+    justify-content: space-between;
+  }
   .header_imagecontainer {
     max-width: 56px;
   }
