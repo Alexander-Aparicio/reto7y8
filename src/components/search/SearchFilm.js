@@ -9,7 +9,7 @@ const SearchFilms = () => {
   return (
     <Formulario keyword={keyword}>
       <InputSearch keyword={keyword} setKeyword={setKeyword}>
-        Busca tu película
+        Buscar película
       </InputSearch>
       <Search>Buscar</Search>
     </Formulario>

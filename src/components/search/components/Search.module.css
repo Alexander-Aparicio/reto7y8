@@ -1,4 +1,11 @@
 .search {
-  padding-left: 7px;
-  padding-right: 7px;
+  padding: 7px 12px;
+  font-size: 1rem;
+  border: none;
+  border-left: 2px solid #bdc2c8;
+  border-radius: 0 5px 5px 0;
+  background-color: #06e5f6;
+  font-weight: bold;
+  cursor: pointer;
+  color: #404751;
 }

@@ -15,8 +15,7 @@ const Header = () => {
         </figure>
         <h2 className={styles.name}>INFOPelículas</h2>
       </div>
-
-      {window.matchMedia("(min-width: 600px)").matches ? <SearchFilms /> : null}
+      {window.matchMedia("(min-width: 600px)").matches ? <SearchFilms/> : null}
     </header>
   );
 };

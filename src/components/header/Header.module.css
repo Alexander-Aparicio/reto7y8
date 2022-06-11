@@ -1,19 +1,23 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   overflow: hidden;
+  margin: 0.75rem auto;
+  max-width: 95%;
 }
 .branding {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 1rem;
 }
 .header_imagecontainer {
   display: flex;
   max-width: 42px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 10px 25px;
+  margin: 0;
 }
 .header_image {
   width: 100%;
@@ -22,11 +26,14 @@
   color: #fff;
 }
 
-@media (min-width: 500px) {
-  .header {
-    justify-content: space-between;
-  }
+@media (min-width: 700px) {
   .header_imagecontainer {
     max-width: 56px;
+  }
+}
+@media (max-width: 700px){
+  .header{
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

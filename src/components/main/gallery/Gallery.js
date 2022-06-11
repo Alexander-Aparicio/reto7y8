@@ -19,16 +19,16 @@ const Gallery = () => {
 
   return (
     <article className={styles.article}>
-      <h1 className={styles.article__title}>🍿 ¡BIENVENIDO! 😎</h1>
+      {/* <h1 className={styles.article__title}>🍿 ¡BIENVENIDO! 😎</h1>
       <p className={styles.article__description}>
         Busca información sobre las películas a estrenarse, encuentra films que
         todavía no viste y te recomendaron.
-      </p>
+      </p> */}
 
       {window.matchMedia("(min-width: 600px)").matches ? null : <SearchFilms />}
 
       <section className={styles.section}>
-        <h2 className={styles.section__title}>Acción - Terror y más</h2>
+        {/* <h2 className={styles.section__title}>Acción - Terror y más</h2> */}
         <div className={styles.section__cards}>
           {films.length !== 0 ? (
             films.map((card) => {
