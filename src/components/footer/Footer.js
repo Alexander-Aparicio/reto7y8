@@ -4,6 +4,14 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <figure className={styles.logo}>
+        <img
+          className={styles.imagen}
+          src={"./the-movie-db.svg"}
+          alt="logo de the movie db"
+        />
+      </figure>
+      <p className={styles.developer}>Desarrollado por Shess Develop</p>
       <nav className={styles.footerNav}>
         <div className={styles.footerNavContainer}>
           <ul className={styles.footerNavlinkList}>
