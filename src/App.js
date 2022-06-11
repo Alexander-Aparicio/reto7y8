@@ -1,16 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
-import Gallery from "./components/main/gallery/Gallery";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Welcome from "./components/main/welcome/Welcome";
+import Buscador from "./pages/Buscador";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <DataProvider>
-      <Header />
-      <Welcome />
-      <Gallery />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/buscador" element={<Buscador />} />
+      </Routes>
     </DataProvider>
   );
 }
