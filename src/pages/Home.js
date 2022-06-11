@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <ul className={styles.ul}>
-        <li className={styles.li}>
+        <li className={styles.li1}>
           <picture>
             <img
               className={styles.imagen}
@@ -15,7 +15,7 @@ const Home = () => {
             ></img>
           </picture>
         </li>
-        <li className={styles.li}>
+        <li className={styles.li2}>
           <picture>
             <img
               className={styles.imagen}
@@ -24,7 +24,7 @@ const Home = () => {
             ></img>
           </picture>
         </li>
-        <li className={styles.li}>
+        <li className={styles.li3}>
           <picture>
             <img
               className={styles.imagen}
@@ -33,7 +33,7 @@ const Home = () => {
             ></img>
           </picture>
         </li>
-        <li className={styles.li}>
+        <li className={styles.li4}>
           <picture>
             <img
               className={styles.imagen}
@@ -42,7 +42,7 @@ const Home = () => {
             ></img>
           </picture>
         </li>
-        <li className={styles.li}>
+        <li className={styles.li5}>
           <picture>
             <img
               className={styles.imagen}
