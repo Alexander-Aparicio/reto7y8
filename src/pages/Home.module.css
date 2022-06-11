@@ -27,8 +27,8 @@
   background: #272a3b;
   cursor: pointer;
   position: absolute;
-  transform: translate(-50%, -25%);
-  top: 75%;
+  transform: translate(-50%, -20%);
+  top: 80%;
   left: 50%;
   z-index: 0;
   user-select: none;
